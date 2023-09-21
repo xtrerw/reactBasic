@@ -2,6 +2,10 @@ import './App.css'
 import { Link,Route, Routes } from 'react-router-dom'
 import {Home} from './pagina/Home'
 import {BookList} from './pagina/BookList'
+import {Book} from './pagina/Book'
+import {NewBook} from './pagina/NewBook'
+import { NotFound } from './pagina/NotFound'
+import { BookLayout } from './pagina/BookLayout'
 
 function App() {
   return ( 
@@ -18,7 +22,16 @@ function App() {
       </nav>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/libros' element={<BookList />} />
+        <Route path='/libros'element={<BookLayout />} >
+          <Route index element={<BookList />} />
+          <Route path=':id' element={<Book />} />
+          <Route path='nuevo' element={<NewBook />} />
+        </Route>
+        {/* <Route path='/libros' element={<BookList />} /> */}
+        {/* libros con sus id */}
+        {/* <Route path='/libros/:id' element={<Book />} />
+        <Route path='/libros/nuevo' element={<NewBook />} /> */}
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </> 
   ) 
