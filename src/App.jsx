@@ -16,7 +16,7 @@ function App() {
             <Link to="/">Inicial</Link>
           </li>
           <li>
-            <Link to="/libros">Libros</Link>
+            <Link to="/libros" className='libroClick'>Libros</Link>
           </li>
         </ul>
       </nav>
