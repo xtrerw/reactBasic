@@ -18,7 +18,8 @@ function App() {
                 ({isActive})=> {
                   return isActive? {
                     color: 'red',
-                    textDecoration: 'none'
+                    textDecoration: 'none',
+                    fontSize: '30px'
                   } :{}
                 }
               }
