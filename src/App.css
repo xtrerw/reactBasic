@@ -1,8 +1,5 @@
-.libroClick{
-    color: black;
+.active{
+    color: rgb(58, 226, 43);
     text-decoration: none;
     font-size: 30px;
-}
-.libroClick:focus{
-    color: brown;
 }

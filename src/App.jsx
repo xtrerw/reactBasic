@@ -31,7 +31,8 @@ function App() {
               </NavLink>
           </li>
           <li>
-            <Link to="/libros" className='libroClick'>Libros</Link>
+            {/* deja de fijar el router de padre */}
+            <NavLink end to="/libros">Libros</NavLink>
           </li>
         </ul>
       </nav>
