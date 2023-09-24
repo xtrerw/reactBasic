@@ -1,5 +1,5 @@
 import './App.css'
-import { Link,Route, Routes } from 'react-router-dom'
+import { Link,NavLink,Route, Routes } from 'react-router-dom'
 import {Home} from './pagina/Home'
 import {BookList} from './pagina/BookList'
 import {Book} from './pagina/Book'
@@ -13,7 +13,13 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Inicial</Link>
+            <NavLink to="/"
+              style={
+                ({isActive})=> {
+                  return isActive? {color: 'red'} :{}
+                }
+              }
+            >Inicial</NavLink>
           </li>
           <li>
             <Link to="/libros" className='libroClick'>Libros</Link>
