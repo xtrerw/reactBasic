@@ -16,7 +16,10 @@ function App() {
             <NavLink to="/"
               style={
                 ({isActive})=> {
-                  return isActive? {color: 'red'} :{}
+                  return isActive? {
+                    color: 'red',
+                    textDecoration: 'none',
+                  } :{}
                 }
               }
             >Inicial</NavLink>
