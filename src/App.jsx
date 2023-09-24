@@ -23,7 +23,12 @@ function App() {
                   } :{}
                 }
               }
-            >Inicial</NavLink>
+            >
+              {/* función de clic texto inicial */}
+              {({isActive})=> {
+                return isActive? "active inicial":"inicial"
+              }}
+              </NavLink>
           </li>
           <li>
             <Link to="/libros" className='libroClick'>Libros</Link>
